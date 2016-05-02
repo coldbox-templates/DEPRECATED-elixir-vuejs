@@ -4,6 +4,8 @@
     "gulp": "^3.9.1"
   },
   "dependencies": {
-    "coldbox-elixir": "^1.1.0"
+    "bootstrap-sass": "^3.3.6",
+    "coldbox-elixir": "^1.1.0",
+    "vue": "^1.0.21"
   }
 }

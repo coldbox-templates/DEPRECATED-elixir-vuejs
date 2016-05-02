@@ -12,5 +12,8 @@ var elixir = require( 'coldbox-elixir' );
  */
 
 elixir( function( mix ){
-	//mix.scripts( "test.js" );
+	// Mix App styles
+	mix.sass( "App.scss" )
+		// Mix JS and VueJS components
+		.browserify( "App.js" );
 } );
