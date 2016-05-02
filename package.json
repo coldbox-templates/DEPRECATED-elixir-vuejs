@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "coldbox-elixir": "^1.1.0"
+  }
+}
