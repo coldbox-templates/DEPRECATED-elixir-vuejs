@@ -4,7 +4,7 @@ This advanced template leverages ColdBox and the (ColdBox Elixir)[https://github
 
 Please check out the ColdBox Elixir documentation for further information: https://github.com/ColdBox/elixir/wiki
 
-It also leverages (Vuejs)[http://vuejs.org/] for your front end framework.
+It also leverages [Vuejs](http://vuejs.org/) for your front end framework.
 
 ## License
 Apache License, Version 2.0.
