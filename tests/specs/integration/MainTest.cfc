@@ -56,7 +56,7 @@
 		// debug(event.getCollection());
 
 		//Do your asserts below for setnextevent you can test for a setnextevent boolean flag
-		$assert.isEqual( "main.index", event.getValue( "setnextevent", "" ), "Relocation Test" );
+		$assert.isEqual( "main.index", event.getValue( "setnextevent_event", "" ), "Relocation Test" );
 		</cfscript>
 	</cffunction>
 
