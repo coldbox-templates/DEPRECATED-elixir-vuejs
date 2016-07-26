@@ -1,33 +1,34 @@
 {
-    "name":"Advanced APP Template",
+    "name":"Elixir VueJS App Template",
     "version":"1.0.0",
-    "author":"",
-    "slug":"cbtemplate-advanced-script",
+    "location": "https://github.com/coldbox-templates/elixir-vuejs/archive/master.zip",
+    "author":"Ortus Solutions, Corp",
+    "slug":"cbtemplate-elixir-vuejs",
+    "shortDescription":"A ColdBox application template that leverages ColdBox Elixir for assets and VueJS for UI",
     "createPackageDirectory":false,
     "type":"mvc",
-    "keywords":"",
-    "homepage":"",
-    "documentation":"",
+    "keywords":"coldbox,app templates,elixir,vuejs",
+    "homepage":"https://github.com/coldbox-templates/elixir-vuejs",
+    "documentation":"https://github.com/coldbox-templates/elixir-vuejs",
     "repository":{
-        "type":"",
-        "url":""
+        "type":"git",
+        "url":"https://github.com/coldbox-templates/elixir-vuejs"
     },
-    "bugs":"",
-    "shortDescription":"",
+    "bugs":"https://github.com/coldbox-templates/elixir-vuejs/issues",
     "contributors":[
         
     ],
     "ignore":[
-        
+        "readme.md"
     ],
     "devDependencies":{
-        "testbox":"2.3.0+00044"
+        "testbox":"^2.3.0+00044"
     },
     "installPaths":{
         "coldbox":"coldbox",
         "testbox":"testbox"
     },
     "dependencies":{
-        "coldbox":"4.2.0+00002"
+        "coldbox":"^4.2.0+00002"
     }
 }
