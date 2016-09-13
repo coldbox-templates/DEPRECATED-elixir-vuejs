@@ -34,6 +34,7 @@
 			controllerDecorator			= "",
 
 			//Error/Exception Handling
+			invalidHTTPMethodHandler = "",
 			exceptionHandler		= "main.onException",
 			onInvalidEvent			= "",
 			customErrorTemplate		= "",
