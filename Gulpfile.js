@@ -1,4 +1,6 @@
-var elixir = require( 'coldbox-elixir' );
+var elixir = require( "coldbox-elixir" );
+
+require( "coldbox-elixir-vue-2" );
 
 /*
  |--------------------------------------------------------------------------
@@ -15,5 +17,5 @@ elixir( function( mix ){
 	// Mix App styles
 	mix.sass( "App.scss" )
 		// Mix JS and VueJS components
-		.browserify( "App.js" );
+		.webpack( "App.js" );
 } );
