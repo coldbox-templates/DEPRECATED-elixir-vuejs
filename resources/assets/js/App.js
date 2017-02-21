@@ -7,7 +7,10 @@ new Vue( {
 
     components : { Hola },
 
-    ready() {
-        alert( 'ColdBox, Vue and Vueify all set to go!' );
+    mounted : function() {
+        if ( Vue.config.devtools && console.log ) {
+            console.log( 'ColdBox, Vue and Vueify all set to go!' );
+            console.log( "Vue Version " + Vue.version );
+        }
     }
 } );
