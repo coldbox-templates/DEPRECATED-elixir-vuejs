@@ -28,5 +28,6 @@ Disallow: /layouts/
 Disallow: /logs/
 Disallow: /models/
 Disallow: /modules/
+Disallow: /modules_app/
 Disallow: /views/
 Allow: /

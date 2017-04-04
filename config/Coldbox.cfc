@@ -26,7 +26,7 @@
 			//Extension Points
 			applicationHelper 			= "includes/helpers/ApplicationHelper.cfm",
 			viewsHelper					= "",
-			modulesExternalLocation		= [ "modules_app" ],
+			modulesExternalLocation		= [],
 			viewsExternalLocation		= "",
 			layoutsExternalLocation 	= "",
 			handlersExternalLocation  	= "",
