@@ -25,7 +25,7 @@
 		</p>
 		<p>
 			Design thanks to
-			<a href="http://twitter.github.com/bootstrap">Twitter Boostrap</a>
+			<a href="http://getbootstrap.com/">Twitter Boostrap</a>
 		</p>
 	</footer>
 	
