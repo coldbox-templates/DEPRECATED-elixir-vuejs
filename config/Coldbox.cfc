@@ -59,8 +59,6 @@
 
 		// Module Directives
 		modules = {
-			//Turn to false in production
-			autoReload = false,
 			// An array of modules names to load, empty means all of them
 			include = [],
 			// An array of modules names to NOT load, empty means none
@@ -133,12 +131,6 @@
 			layoutsLocation  = "layouts",
 			modelsLocation 	 = "models",
 			eventAction 	 = "index"
-		};
-
-		//Datasources
-		datasources = {
-			mysite   = {name="mySite", dbType="mysql", username="root", password="pass"},
-			blog_dsn = {name="myBlog", dbType="oracle", username="root", password="pass"}
 		};
 		*/
 
