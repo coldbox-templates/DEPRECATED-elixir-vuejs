@@ -1,5 +1,5 @@
 ﻿<cfoutput>
-	<div id="app" class="well">
+	<div class="well">
         <hola></hola>
     </div>
 </cfoutput>

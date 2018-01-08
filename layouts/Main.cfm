@@ -12,8 +12,11 @@
 	<link href="includes/css/App.css" rel="stylesheet">
 </head>
 <body>
+	
 	<!---Container And Views --->
-	<div class="container">#renderView()#</div>
+	<div class="container" id="app">
+		#renderView()#
+	</div>
 
 	<footer class="footer">
 		<p class="pull-right">
