@@ -46,7 +46,7 @@ component extends="coldbox.system.testing.BaseTestCase" appMapping="/root"{
 
 			it( "+doSomething relocates", function(){
 				var event = execute( event="main.doSomething" );
-				expect(	event.getValue( "setnextevent_event", "" ) ).toBe( "main.index" );
+				expect(	event.getValue( "relocate_event", "" ) ).toBe( "main.index" );
 			});
 
 			it( "+app start fires", function(){
