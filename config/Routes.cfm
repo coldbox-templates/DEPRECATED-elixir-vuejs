@@ -1,6 +1,6 @@
 ﻿<cfscript>
 	// Allow for full server rewrites (no index.cfm), by default there is a server.json in the root with this enabled
-	setFullRewrites( true );
+	this.setFullRewrites( true );
 	// Allow unique URL or combination of URLs, we recommend both enabled
 	setUniqueURLS( false );
 	// Sets automatic route extension detection and places the extension in the rc.format variable
