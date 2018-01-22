@@ -1,7 +1,7 @@
 {
     "name":"Elixir VueJS App Template",
-    "version":"1.11.0",
-    "location":"https://github.com/coldbox-templates/elixir-vuejs/archive/v1.11.0.zip",
+    "version":"1.12.0",
+    "location":"https://github.com/coldbox-templates/elixir-vuejs/archive/v1.12.0.zip",
     "author":"Ortus Solutions, Corp",
     "slug":"cbtemplate-elixir-vuejs",
     "shortDescription":"A ColdBox application template that leverages ColdBox Elixir for assets and VueJS for UI",
