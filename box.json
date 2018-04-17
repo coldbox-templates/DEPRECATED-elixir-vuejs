@@ -27,7 +27,7 @@
         "testbox":"testbox"
     },
     "dependencies":{
-        "coldbox":"^5.0.0-rc.1"
+        "coldbox":"^5.0.0"
     },
     "scripts":{
         "postVersion":"package set location='https://github.com/coldbox-templates/elixir-vuejs/archive/v`package version`.zip'",
