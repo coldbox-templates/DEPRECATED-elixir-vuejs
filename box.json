@@ -20,7 +20,7 @@
         "readme.md"
     ],
     "devDependencies":{
-        "testbox":"^2.5.0"
+        "testbox":"^2.7.0"
     },
     "installPaths":{
         "coldbox":"coldbox",
