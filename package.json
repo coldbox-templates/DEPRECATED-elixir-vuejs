@@ -1,13 +1,14 @@
 {
-    "private": true,
-    "devDependencies": {
-        "gulp": "^3.9.1",
-        "coldbox-elixir": "^2.1.2",
-        "coldbox-elixir-vue-2": "^2.0.0",
-        "coldbox-elixir-webpack": "^2.0.1"
-    },
-    "dependencies": {
-        "bootstrap-sass": "^3.3.7",
-        "vue": "^2.5.13"
-    }
+  "private": true,
+  "scripts": {
+    "dev": "webpack --hide-modules",
+    "prod": "npm run dev -- -p"
+  },
+  "devDependencies": {
+    "coldbox-elixir": "^3.0.0"
+  },
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "vue": "^2.0.0"
+  }
 }

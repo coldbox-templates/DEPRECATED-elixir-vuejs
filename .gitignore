@@ -6,12 +6,12 @@ WEB-INF
 # logs
 logs/*.*
 
-# NPM, Bower, ETC
-**/node_modules/*
-**/bower_components/*
-
 ## Ignored Dependencies
 coldbox/*
 testbox/*
-modules/*
-**/apidocs/**
+logs/*
+
+# Elixir, Node
+node_modules/*
+npm-debug.log
+includes/*
