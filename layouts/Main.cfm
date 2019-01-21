@@ -10,6 +10,7 @@
 	<base href="#event.getHTMLBaseURL()#" />
 	<!---css --->
 	<link href="includes/css/App.css" rel="stylesheet">
+	<link href="includes/js/App.css" rel="stylesheet">
 </head>
 <body>
 	<!---Container And Views --->
@@ -28,7 +29,9 @@
 			<a href="http://getbootstrap.com/">Twitter Boostrap</a>
 		</p>
 	</footer>
-	
+
+	<script src="includes/js/runtime.js"></script>
+	<script src="includes/js/vendor.js"></script>
 	<script src="includes/js/App.js"></script>
 </body>
 </html>

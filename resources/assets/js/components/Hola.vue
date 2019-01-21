@@ -7,17 +7,17 @@
 </template>
 
 <script>
-    export default {
-        data() {
-            return {
-                name: 'Mr ColdBox'
-            };
-        }
-    };
+export default {
+    data() {
+        return {
+            name: "Mr. ColdBox"
+        };
+    }
+};
 </script>
 
 <style>
-    h1 {
-        color: green;
-    }
+h1 {
+    color: green;
+}
 </style>
