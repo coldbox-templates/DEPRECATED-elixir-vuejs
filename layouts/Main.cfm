@@ -9,7 +9,15 @@
 	<!---Base URL --->
 	<base href="#event.getHTMLBaseURL()#" />
 	<!---css --->
-	<link href="includes/css/App.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="#correctedElixirPath( "css/app.css" )#" />
+    <!--- If there are any extracted Vue styles, they will be in this file --->
+    <cfscript>
+        if ( getCache( "template" ).getOrSet( "vue-styles", function() {
+            return fileExists( correctedElixirPath( "js/app.css" ) );
+        } ) ) {
+            writeOutput( '<link rel="stylesheet" type="text/css" href="#correctedElixirPath( "js/app.css" )#" />' );
+        }
+    </cfscript>
 </head>
 <body>
 	
@@ -18,7 +26,7 @@
 		#renderView()#
 	</div>
 
-	<footer class="footer">
+	<footer class="footer container">
 		<p class="pull-right">
 			<a href="##"><i class="glyphicon glyphicon-arrow-up"></i> Back to top</a>
 		</p>
@@ -28,11 +36,18 @@
 		</p>
 		<p>
 			Design thanks to
-			<a href="http://getbootstrap.com/">Twitter Boostrap</a>
+			<a href="http://getbootstrap.com/">Twitter Bootstrap</a>
 		</p>
 	</footer>
 	
-	<script src="includes/js/App.js"></script>
+	<script type="application/javascript" src="#correctedElixirPath( "js/runtime.js" )#"></script>
+    <script type="application/javascript" src="#correctedElixirPath( "js/vendor.js" )#"></script>
+    <cfloop array="#prc.assetBag.getFooterContent()#" index="assetPath">
+        <cfif right( assetPath, 2 ) EQ "js">
+            <script type="application/javascript" src="#assetPath#"></script>
+        </cfif>
+    </cfloop>
+    <script type="application/javascript" src="#correctedElixirPath( "js/app.js" )#"></script>
 </body>
 </html>
 </cfoutput>

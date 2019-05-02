@@ -1,13 +1,27 @@
 {
     "private": true,
     "devDependencies": {
-        "gulp": "^3.9.1",
-        "coldbox-elixir": "^2.1.2",
-        "coldbox-elixir-vue-2": "^2.0.0",
-        "coldbox-elixir-webpack": "^2.0.1"
+        "@babel/plugin-syntax-jsx": "^7.2.0",
+        "babel-helper-vue-jsx-merge-props": "^2.0.3",
+        "babel-plugin-transform-vue-jsx": "^4.0.1",
+        "coldbox-elixir": "^3.0.0",
+        "jquery": "^3.4.1",
+        "node-sass": "^4.12.0",
+        "popper.js": "^1.15.0",
+        "postcss-loader": "^3.0.0",
+        "sass-loader": "^7.1.0",
+        "vue": "^2.6.10",
+        "vue-loader": "^15.4.2",
+        "vue-template-compiler": "^2.6.10",
+        "webpack": "^4.3.0"
     },
     "dependencies": {
-        "bootstrap-sass": "^3.3.7",
+        "bootstrap": "^4.3.1",
         "vue": "^2.5.13"
+    },
+    "scripts": {
+        "dev": "webpack --hide-modules",
+        "watch": "npm run dev -- --watch",
+        "prod": "npm run dev -- -p"
     }
 }

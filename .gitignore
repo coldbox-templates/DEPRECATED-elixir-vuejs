@@ -1,7 +1,9 @@
 # General Ignores + IDE
 .DS_Store
 settings.xml
+package-lock.json
 WEB-INF
+.vscode
 
 # logs
 logs/*.*
@@ -15,3 +17,6 @@ coldbox/*
 testbox/*
 modules/*
 **/apidocs/**
+includes/css
+includes/js
+includes/*.json

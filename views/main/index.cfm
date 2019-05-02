@@ -1,5 +1,5 @@
 ﻿<cfoutput>
-	<div class="well">
+	<div class="jumbotron">
         <hola></hola>
     </div>
 </cfoutput>
