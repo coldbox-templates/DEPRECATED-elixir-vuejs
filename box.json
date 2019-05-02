@@ -20,11 +20,13 @@
         "readme.md"
     ],
     "devDependencies":{
-        "testbox":"^3.0.0"
+        "testbox":"^3.0.0",
+        "coldbox-asset-bag":"^1.0.2"
     },
     "installPaths":{
-        "coldbox":"coldbox",
-        "testbox":"testbox"
+        "coldbox":"coldbox/",
+        "testbox":"testbox/",
+        "coldbox-asset-bag":"modules/coldbox-asset-bag/"
     },
     "dependencies":{
         "coldbox":"^5.0.0"

@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="col-md-4 offset-md-4">
         <h1>Hola, {{ name }}!</h1>
-        <input type="text" v-model="name">
+        <input class="form-control" type="text" v-model="name">
     </div>
 </template>
 <script>
