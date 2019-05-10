@@ -9,13 +9,13 @@
 	<!---Base URL --->
 	<base href="#event.getHTMLBaseURL()#" />
 	<!---css --->
-    <link rel="stylesheet" type="text/css" href="#correctedElixirPath( "css/app.css" )#" />
+    <link rel="stylesheet" type="text/css" href="#html.elixirPath( "css/app.css" )#" />
     <!--- If there are any extracted Vue styles, they will be in this file --->
     <cfscript>
         if ( getCache( "template" ).getOrSet( "vue-styles", function() {
-            return fileExists( correctedElixirPath( "js/app.css" ) );
+            return fileExists( html.elixirPath( "js/app.css" ) );
         } ) ) {
-            writeOutput( '<link rel="stylesheet" type="text/css" href="#correctedElixirPath( "js/app.css" )#" />' );
+            writeOutput( '<link rel="stylesheet" type="text/css" href="#html.elixirPath( "js/app.css" )#" />' );
         }
     </cfscript>
 </head>
@@ -40,14 +40,14 @@
 		</p>
 	</footer>
 	
-	<script type="application/javascript" src="#correctedElixirPath( "js/runtime.js" )#"></script>
-    <script type="application/javascript" src="#correctedElixirPath( "js/vendor.js" )#"></script>
+	<script type="application/javascript" src="#html.elixirPath( "js/runtime.js" )#"></script>
+    <script type="application/javascript" src="#html.elixirPath( "js/vendor.js" )#"></script>
     <cfloop array="#prc.assetBag.getFooterContent()#" index="assetPath">
         <cfif right( assetPath, 2 ) EQ "js">
             <script type="application/javascript" src="#assetPath#"></script>
         </cfif>
     </cfloop>
-    <script type="application/javascript" src="#correctedElixirPath( "js/app.js" )#"></script>
+    <script type="application/javascript" src="#html.elixirPath( "js/app.js" )#"></script>
 </body>
 </html>
 </cfoutput>
