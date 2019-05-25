@@ -19,4 +19,9 @@ component{
 	rootPath = REReplaceNoCase( this.mappings[ "/tests" ], "tests(\\|/)", "" );
 	this.mappings["/root"]   = rootPath;
 
+	public void function onRequestEnd() { 
+		structDelete( application, "cbController" );
+		structDelete( application, "wirebox" );
+	}
+
 }
