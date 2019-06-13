@@ -1,22 +1,20 @@
 # General Ignores + IDE
 .DS_Store
 settings.xml
-package-lock.json
 WEB-INF
-.vscode
+.env
 
-# logs
-logs/*.*
+# logs + tests
+logs/**
+tests/results/**
 
-# NPM, Bower, ETC
+# npm
 **/node_modules/*
-**/bower_components/*
+npm-debug.log
+yarn-error.log
 
 ## Ignored Dependencies
 coldbox/*
 testbox/*
 modules/*
 **/apidocs/**
-includes/css
-includes/js
-includes/*.json

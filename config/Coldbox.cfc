@@ -6,7 +6,7 @@
 		// coldbox directives
 		coldbox = {
 			//Application Setup
-			appName 				= "Your app name here",
+			appName 				= getSystemSetting( "APPNAME", "Your app name here" ),
 			eventName 				= "event",
 
 			//Development Settings
@@ -99,7 +99,7 @@
 				settingName = "overrideValue"
 			}
 		};
-		
+
 		// flash scope configuration
 		flash = {
 			scope = "session,client,cluster,ColdboxCache,or full path",
