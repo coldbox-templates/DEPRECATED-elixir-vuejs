@@ -1,19 +1,45 @@
-const elixir = require( "coldbox-elixir" );
-const webpack = require( "webpack" );
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const elixir 	= require( "coldbox-elixir" );
+const webpack 	= require( "webpack" );
 
-elixir.config.mergeConfig({
-    plugins: [
+
+elixir.config.mergeConfig( {
+    plugins : [
         // globally scoped items which need to be available in all templates
         new webpack.ProvidePlugin({
-			$              : "jquery",
-			jQuery         : "jquery",
-			"window.jQuery": "jquery",
-			"window.$"     : "jquery",
-            "Vue"          : ["vue/dist/vue.esm.js", "default"],
-            "window.Vue"   : ["vue/dist/vue.esm.js", "default"]
+			$              	: "jquery",
+			jQuery         	: "jquery",
+			"window.jQuery"	: "jquery",
+			"window.$"     	: "jquery",
+			"bootstrap"		: "bootstrap",
+            "Vue"          	: [ "vue/dist/vue.esm.js", "default" ],
+            "window.Vue"   	: [ "vue/dist/vue.esm.js", "default" ]
         })
-    ]
-});
+	],
+	module : {
+		rules : [
+			{
+				test: /\.(sa|sc|c)ss$/,
+				use: [
+					'style-loader',
+					'css-loader',
+					{
+						loader : 'postcss-loader',
+						options: {
+							plugins: function () { // post css plugins, can be exported to postcss.config.js
+								return [
+									require('precss'),
+									require('autoprefixer')
+								];
+							}
+						}
+					},
+					'sass-loader'
+				]
+			}
+		]
+	}
+} );
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -25,9 +51,9 @@ elixir.config.mergeConfig({
  |
  */
 
-module.exports = elixir(function(mix) {
+module.exports = elixir( mix => {
 	// Mix App styles
-	mix.sass( "app.scss" )
+	mix.sass( "App.scss" )
 		// Mix JS and VueJS components
-		.vue( "app.js" );
+		.vue( "App.js" );
 } );

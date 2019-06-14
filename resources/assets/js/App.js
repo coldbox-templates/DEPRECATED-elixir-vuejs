@@ -1,7 +1,3 @@
-import "bootstrap";
-window.Vue = require( 'vue' );
-
-
 import Hola from './components/Hola.vue';
 
 new Vue( {
