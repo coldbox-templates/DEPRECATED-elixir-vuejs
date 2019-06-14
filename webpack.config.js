@@ -1,4 +1,3 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const elixir 	= require( "coldbox-elixir" );
 const webpack 	= require( "webpack" );
 
@@ -15,30 +14,7 @@ elixir.config.mergeConfig( {
             "Vue"          	: [ "vue/dist/vue.esm.js", "default" ],
             "window.Vue"   	: [ "vue/dist/vue.esm.js", "default" ]
         })
-	],
-	module : {
-		rules : [
-			{
-				test: /\.(sa|sc|c)ss$/,
-				use: [
-					'style-loader',
-					'css-loader',
-					{
-						loader : 'postcss-loader',
-						options: {
-							plugins: function () { // post css plugins, can be exported to postcss.config.js
-								return [
-									require('precss'),
-									require('autoprefixer')
-								];
-							}
-						}
-					},
-					'sass-loader'
-				]
-			}
-		]
-	}
+	]
 } );
 /*
  |--------------------------------------------------------------------------
