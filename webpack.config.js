@@ -1,5 +1,5 @@
-const elixir = require( "coldbox-elixir" );
-const webpack = require( "webpack" );
+const elixir 	= require( "coldbox-elixir" );
+const webpack 	= require( "webpack" );
 
 elixir.config.mergeConfig({
     plugins: [
@@ -25,7 +25,7 @@ elixir.config.mergeConfig({
  |
  */
 
-module.exports = elixir(function(mix) {
+module.exports = elixir( function( mix ) {
 	// Mix App styles
 	mix.sass( "app.scss" )
 		// Mix JS and VueJS components

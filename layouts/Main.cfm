@@ -9,18 +9,18 @@
 	<!---Base URL --->
 	<base href="#event.getHTMLBaseURL()#" />
 	<!---css --->
-    <link rel="stylesheet" type="text/css" href="#html.elixirPath( "css/app.css" )#" />
+	<link rel="stylesheet" type="text/css" href="#html.elixirPath( "css/app.css" )#" />
     <!--- If there are any extracted Vue styles, they will be in this file --->
-    <cfscript>
+	<cfscript>
         if ( getCache( "template" ).getOrSet( "vue-styles", function() {
-            return fileExists( html.elixirPath( "js/app.css" ) );
+            return fileExists( expandPath( html.elixirPath( "js/app.css" ) ) );
         } ) ) {
             writeOutput( '<link rel="stylesheet" type="text/css" href="#html.elixirPath( "js/app.css" )#" />' );
         }
     </cfscript>
 </head>
 <body>
-	
+
 	<!---Container And Views --->
 	<div class="container" id="app">
 		#renderView()#
@@ -39,14 +39,9 @@
 			<a href="https://getbootstrap.com/">Twitter Bootstrap</a>
 		</p>
 	</footer>
-	
+
 	<script type="application/javascript" src="#html.elixirPath( "js/runtime.js" )#"></script>
     <script type="application/javascript" src="#html.elixirPath( "js/vendor.js" )#"></script>
-    <cfloop array="#prc.assetBag.getFooterContent()#" index="assetPath">
-        <cfif right( assetPath, 2 ) EQ "js">
-            <script type="application/javascript" src="#assetPath#"></script>
-        </cfif>
-    </cfloop>
     <script type="application/javascript" src="#html.elixirPath( "js/app.js" )#"></script>
 </body>
 </html>
