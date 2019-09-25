@@ -16,7 +16,7 @@
         }
     },
 	"datasources" : {
-		 "coldbox":{
+		 "${DB_DATABASE}":{
 			 "host":"${DB_HOST}",
 			 "dbdriver":"${DB_DRIVER}",
 			 "database":"${DB_DATABASE}",
