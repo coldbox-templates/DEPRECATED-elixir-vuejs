@@ -31,6 +31,7 @@
     },
     "scripts":{
         "postVersion":"package set location='https://github.com/coldbox-templates/elixir-vuejs/archive/v`package version`.zip'",
-        "postPublish":"!git push --follow-tags"
+		"postPublish":"!git push --follow-tags",
+		"postInstall":"pathExists .env || cp .env.example .env"
     }
 }
