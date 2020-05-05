@@ -26,17 +26,17 @@
 		#renderView()#
 	</div>
 
-	<footer class="footer container">
+	<footer class="footer">
 		<p class="pull-right">
 			<a href="##"><i class="glyphicon glyphicon-arrow-up"></i> Back to top</a>
 		</p>
 		<p>
-			<a href="https://www.coldbox.org">ColdBox Platform</a> is a copyright-trademark software by
+			<a href="https://github.com/ColdBox/coldbox-platform/stargazers">ColdBox Platform</a> is a copyright-trademark software by
 			<a href="https://www.ortussolutions.com">Ortus Solutions, Corp</a>
 		</p>
 		<p>
 			Design thanks to
-			<a href="https://getbootstrap.com/">Twitter Bootstrap</a>
+			<a href="https://getbootstrap.com/">Twitter Boostrap</a>
 		</p>
 	</footer>
 

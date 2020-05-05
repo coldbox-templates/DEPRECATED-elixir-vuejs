@@ -1,13 +1,13 @@
 {
     "name":"Elixir VueJS App Template",
-    "version":"2.10.0",
-    "location":"https://github.com/coldbox-templates/elixir-vuejs/archive/v2.10.0.zip",
-    "author":"Ortus Solutions, Corp",
+    "version":"6.0.0-snapshot",
+	"location":"forgeboxStorage",
+	"author":"Ortus Solutions, Corp",
     "slug":"cbtemplate-elixir-vuejs",
     "shortDescription":"A ColdBox application template that leverages ColdBox Elixir for assets and VueJS for UI",
     "createPackageDirectory":false,
     "type":"mvc",
-    "keywords":"coldbox,app templates,elixir,vuejs",
+    "keywords":[],
     "homepage":"https://github.com/coldbox-templates/elixir-vuejs",
     "documentation":"https://github.com/coldbox-templates/elixir-vuejs",
     "repository":{
@@ -20,18 +20,20 @@
         "readme.md"
     ],
     "devDependencies":{
-        "testbox":"^3.0.0"
+        "testbox":"^4.0.0"
     },
     "installPaths":{
         "coldbox":"coldbox/",
         "testbox":"testbox/"
     },
     "dependencies":{
-        "coldbox":"^5.0.0"
+        "coldbox":"be"
     },
     "scripts":{
-        "postVersion":"package set location='https://github.com/coldbox-templates/elixir-vuejs/archive/v`package version`.zip'",
         "postPublish":"!git push --follow-tags",
-        "postInstall":"pathExists .env || cp .env.example .env"
+		"postInstall":"pathExists .env || cp .env.example .env",
+		"format":"cfformat run config/,handlers/,interceptors/,models/,modules_app/,tests/specs/,*.cfc --overwrite",
+		"format:check":"cfformat check config/,handlers/,interceptors/,models/,modules_app/,tests/specs/,*.cfc",
+		"format:watch":"cfformat watch path='config/,handlers/,interceptors/,models/,modules_app/,tests/specs/,*.cfc' settingsPath='.cfformat.json'"
     }
 }
