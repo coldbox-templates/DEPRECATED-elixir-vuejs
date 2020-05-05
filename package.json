@@ -22,6 +22,6 @@
     "scripts": {
         "dev": "webpack --hide-modules",
         "watch": "npm run dev -- --watch",
-        "prod": "npm run dev -- -p"
+        "prod": "webpack -p -d"
     }
 }
