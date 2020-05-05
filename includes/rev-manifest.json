@@ -1,12 +1,8 @@
 {
-  "includes/js/runtime.js": "/includes/js/runtime.afb9680ee5f76a18acc5.js",
-  "includes/js/runtime.js.map": "/includes/js/runtime.afb9680ee5f76a18acc5.js.map",
-  "includes/css/app.css": "/includes/css/app.2d53b5d13f7b4209746e.css",
-  "includes/css/app.js": "/includes/css/app.a91620ff561f96f1b5d3.js",
-  "includes/css/app.js.map": "/includes/css/app.a91620ff561f96f1b5d3.js.map",
-  "includes/js/app.css": "/includes/js/app.6c5f85c9624840f45c4d.css",
-  "includes/js/app.js": "/includes/js/app.bc23ec83a5bde5f605ee.js",
-  "includes/js/app.js.map": "/includes/js/app.bc23ec83a5bde5f605ee.js.map",
-  "includes/js/vendor.js": "/includes/js/vendor.a39188f81464237a0b8a.js",
-  "includes/js/vendor.js.map": "/includes/js/vendor.a39188f81464237a0b8a.js.map"
+  "includes/js/runtime.js": "/includes/js/runtime.js",
+  "includes/js/vendor.js": "/includes/js/vendor.js",
+  "includes/css/app.css": "/includes/css/app.css",
+  "includes/css/app.js": "/includes/css/app.js",
+  "includes/js/app.css": "/includes/js/app.css",
+  "includes/js/app.js": "/includes/js/app.js"
 }

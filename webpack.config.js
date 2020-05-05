@@ -26,8 +26,9 @@ elixir.config.mergeConfig({
  */
 
 module.exports = elixir( function( mix ) {
-	// Mix App styles
-	mix.sass( "app.scss" )
+	mix
+		// Mix App styles
+		.sass( "app.scss" )
 		// Mix JS and VueJS components
 		.vue( "app.js" );
 } );
