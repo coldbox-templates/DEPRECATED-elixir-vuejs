@@ -17,4 +17,4 @@ yarn-error.log
 coldbox/*
 testbox/*
 modules/*
-**/apidocs/**
+modules/**/apidocs/**
