@@ -1,6 +1,6 @@
 {
     "name":"Elixir VueJS App Template",
-    "version":"6.0.0-snapshot",
+    "version":"6.0.0",
     "location":"forgeboxStorage",
     "author":"Ortus Solutions, Corp",
     "slug":"cbtemplate-elixir-vuejs",
