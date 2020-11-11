@@ -27,7 +27,7 @@
         "testbox":"testbox/"
     },
     "dependencies":{
-        "coldbox":"be"
+        "coldbox":"^6.0.0"
     },
     "scripts":{
         "postPublish":"!git push --follow-tags",
