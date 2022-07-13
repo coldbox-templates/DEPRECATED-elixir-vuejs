@@ -31,7 +31,7 @@
     },
     "scripts":{
         "postPublish":"!git push --follow-tags",
-        "postInstall":"pathExists .env || cp env.example .env && mv env.example .env.example",
+        "postInstall":"pathExists .env || cp .env.example .env",
         "format":"cfformat run config/,handlers/,interceptors/,models/,modules_app/,tests/specs/,*.cfc --overwrite",
         "format:check":"cfformat check config/,handlers/,interceptors/,models/,modules_app/,tests/specs/,*.cfc",
         "format:watch":"cfformat watch path='config/,handlers/,interceptors/,models/,modules_app/,tests/specs/,*.cfc' settingsPath='.cfformat.json'"
