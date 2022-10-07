@@ -34,6 +34,8 @@
         "postInstall":"pathExists .env || cp .env.example .env",
         "format":"cfformat run config/,handlers/,interceptors/,models/,modules_app/,tests/specs/,*.cfc --overwrite",
         "format:check":"cfformat check config/,handlers/,interceptors/,models/,modules_app/,tests/specs/,*.cfc",
-        "format:watch":"cfformat watch path='config/,handlers/,interceptors/,models/,modules_app/,tests/specs/,*.cfc' settingsPath='.cfformat.json'"
+        "format:watch":"cfformat watch path='config/,handlers/,interceptors/,models/,modules_app/,tests/specs/,*.cfc' settingsPath='.cfformat.json'",
+		"build:docker":"!docker build --no-cache -t my-coldbox-app -f ./Dockerfile ./",
+		"run:docker": "!docker run -it -p 8080:8080 my-coldbox-app"
     }
 }
