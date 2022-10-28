@@ -2,7 +2,12 @@
 .DS_Store
 settings.xml
 WEB-INF
+
+# Engines + Database + CBFS + Secrets
 .env
+.engine/**
+.db/**
+.cbfs/**
 
 # logs + tests
 logs/**

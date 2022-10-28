@@ -1,0 +1,65 @@
+################################################################################
+# ColdBox Docker Compose Stack
+# This can be used to quickly run your ColdBox application in a CommandBox based Docker Container.
+#
+# We pull the latest image, you can change this to a specific tag or CFML engine, which we recommend.
+# https://hub.docker.com/repository/docker/ortussolutions/commandbox
+#
+# Database
+# - We give you two databases for you to choose from below: MySQL 8 or PostgreSQL.
+################################################################################
+version: "3.9"
+services:
+
+  ## PostgreSQL
+  # coldbox_db:
+  #   platform: linux/x86_64 # Needed for Mac's on the M1 chip
+  #   image: postgres:12
+  #   environment:
+  #     POSTGRES_PASSWORD: "coldbox"
+  #     POSTGRES_USER: "coldbox"
+  #     POSTGRES_DB: "coldbox"
+  #   ports:
+  #     - 5432:5432
+  #   volumes:
+  #     - .db/postgres/initdb:/docker-entrypoint-initdb.d
+  #     - .db/postgres/data:/var/lib/postgresql/data
+
+  # MySQL Server 8
+  coldbox_db:
+    platform: linux/x86_64 # Needed for Mac's on the M1 chip
+    image: mysql:8
+    ports:
+      - "4306:3306"
+    environment:
+      MYSQL_DATABASE: "coldbox"
+      MYSQL_ROOT_PASSWORD: "coldbox"
+    volumes:
+      # Store the data locally
+      - .db/mysql8/data:/var/lib/mysql
+
+  # ColdBox Site
+  coldbox_app:
+    depends_on:
+      - coldbox_db
+    platform: linux/x86_64 # Needed for Mac's on the M1 chip
+    image: ortussolutions/commandbox:lucee5
+    # Environment Variables
+    environment:
+      CFCONFIG_ADMINPASSWORD: coldbox
+      DB_HOST: coldbox_db
+      DB_PORT: 4306
+      DB_DATABASE: coldbox
+      DB_DRIVER: MySQL
+      DB_USER: root
+      DB_PASSWORD: coldbox
+      DB_CLASS: com.mysql.jdbc.Driver
+      DB_BUNDLEVERSION: 8.0.19
+      DB_BUNDLENAME: com.mysql.cj
+    # Ports
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+    # Data & Overrides
+    volumes:
+      - ./:/app
